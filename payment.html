@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Payment Gateway</title>
+    <link rel="stylesheet" href="payment.css">
+    <script type="text/javascript" src = "payment.js"></script>
+</head>
+    <body>
+        <img src="pg.png" class="img">
+        <div class="container">
+        <form onsubmit="return conditions()">
+            <label style="color: white;"><b>Card number: </b></label>
+            <input class="inp-txt" type="tel" placeholder="Card number" id="cn" onKeyPress="if(this.value.length==16)return false;" pattern=[0-9]{16}>
+            <br>
+            <br>
+            <label style="color: white;" id="expm"><b>Expiry month: </b></label>
+            <input class="inp-txt" type="number" placeholder="MM" id="m" min="01" max="12" onKeyPress="if(this.value.length==2)return false;">
+            <label style="color: white;"><b>Expiry year: </b></label>
+            <input class="inp-txt" type="number" placeholder="YY" id="y" min="20" max="50" onKeyPress="if(this.value.length==2)return false;">
+            <br>
+            <br>
+            <label style="color: white;"><b>CVV code: </b></label>
+            <input class="inp-txt" type="text" placeholder="xxx" id="cvv" onKeyPress="if(this.value.length==3)return false;" pattern=[0-9]{3}> 
+            <br>
+            <br>
+            <label style="color: white;"><b>Name on the Card: </b></label>
+            <input class="inp-txt" type="text" id="n" placeholder="Name on the Card" >
+            <br>
+            <br>
+            <input class="btn" type="submit" name="" value="Pay">&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="cv" readonly>
+        </form>
+            </div>
+    </body>
+</html>
